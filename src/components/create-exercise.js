@@ -12,6 +12,13 @@ export default class CreateExercisesList extends Component {
             users: [],
         }
 
+    componentDidMount() {
+        this.setState({
+            users: ['test user'],
+            username: 'test user'
+        })
+    }
+
     onChangeUsername = (event) => {
         this.setState({
             username: event.target.value
