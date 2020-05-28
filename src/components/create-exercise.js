@@ -12,28 +12,43 @@ export default class CreateExercisesList extends Component {
             users: [],
         }
 
-    onChangeUsername(event) {
+    onChangeUsername = (event) => {
         this.setState({
             username: event.target.value
         })
     }
 
-    onChangeDescription(event) {
+    onChangeDescription = (event) => {
         this.setState({
             description: event.target.value
         })
     }
 
-    onChangeDuration(event) {
+    onChangeDuration = (event) => {
         this.setState({
             duration: event.target.value
         })
     }
 
-    onChangeDate(date) {
+    onChangeDate = (date) => {
         this.setState({
             username: date.target.value
         })
+    }
+
+    onSubmit = (event) => {
+        event.preventDefault()
+
+        const exercise = {
+            username: this.state.username,
+            description: this.state.description,
+            duration: this.state.duration,
+            date: this.state.date,
+        }
+    
+      console.log(exercise)
+
+      window.location = '/';
     }
 
 
