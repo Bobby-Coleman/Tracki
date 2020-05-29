@@ -41,7 +41,7 @@ export default class CreateExercisesList extends Component {
 
     onChangeDate = (date) => {
         this.setState({
-            username: date.target.value
+            date: date
         })
     }
 
